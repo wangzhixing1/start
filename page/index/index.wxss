@@ -1,0 +1,479 @@
+page {
+  height: 100%;
+}
+
+.container {
+  height: 100%;
+  font-size: 24rpx;
+  color: #333;
+}
+
+.header {
+  display: -webkit-flex;
+  flex-direction: row;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 18rpx;
+  box-sizing: border-box;
+  height: 106rpx;
+  background-color: #333;
+  border-bottom: 1px solid #414141;
+}
+
+.header .logo {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.header .welcome {
+  font-size: 24rpx;
+  color: #fff;
+  margin: 25rpx 0 0 10rpx;
+}
+
+.notice {
+  border-top: 1px solid #717171;
+}
+
+.notice, .notice-container {
+  height: 65rpx;
+  background-color: #333;
+}
+
+.notice-con {
+  color: #fff;
+  line-height: 65rpx;
+  padding: 0 18rpx;
+  justify-content: space-between;
+  letter-spacing: 1rpx;
+}
+
+.content-container {
+  background-color: #f4f4f4;
+}
+
+.container1 {
+  height: 100%;
+}
+
+.header1 {
+  display: flex;
+  justify-content: space-around;
+  background-color: #fff;
+  margin-bottom: 10rpx;
+}
+
+.header1 .title {
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 30rpx;
+  text-align: center;
+}
+
+.header1 .title.selected {
+  border-bottom: 3rpx solid #ff5a00;
+  color: #ff5a00;
+}
+
+#orderPage {
+  display: flex;
+  height: auto;
+  position: relative;
+  z-index: 21; 
+}
+
+#commentPage {
+  height: auto;
+}
+
+#restaurantPage {
+  background: yellow;
+}
+
+.orderPage-sideBar {
+  width: 150rpx;
+  /* height: 960rpx; */
+  background: #f4f4f4;
+}
+
+.menuList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menuList .menu {
+  height: 100rpx;
+  width: 150rpx;
+  position: relative;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 28rpx;
+  border-bottom: 1rpx dashed #ececec;
+}
+
+.selected.menu {
+  background: #fff;
+}
+
+.foodList {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #f4f4f4;
+}
+
+.foodList .block {
+  height: 25rpx;
+  width: 6rpx;
+  background: #ff5a00;
+  margin: 0 8rpx;
+}
+
+.foodList .title {
+  padding: 15rpx;
+  height: 25rpx;
+  line-height: 25rpx;
+  font-size: 25rpx;
+  background-color: #fff;
+}
+
+.food {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: top;
+  padding-top: 25rpx;
+  height: 200rpx;
+  border-bottom: 1rpx solid #ececec;
+  background: white;
+}
+
+.food::before {
+  content: "";
+  width: 15rpx;
+  height: 100%;
+  left: -15rpx;
+  top: 0;
+  border: 1px solid white;
+}
+
+.food .img {
+  border: 1px solid #eee;
+  width: 135rpx;
+  height: 135rpx;
+}
+
+.food-info {
+  padding-left: 15rpx;
+  line-height: 48rpx;
+  flex: 1;
+}
+
+.food .name {
+  font-size: 30rpx;
+  color: #333;
+}
+
+.food .abstract {
+  font-size: 20rpx;
+  margin-top: 8rpx;
+  height: 30rpx;
+  width: 400rpx;
+  line-height: 30rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #999;
+}
+
+.food .sales {
+  font-size: 20rpx;
+  color: #aeaeae;
+}
+
+.food-info .row {
+  justify-content: space-between;
+  margin-top: 5rpx;
+}
+
+.food .price {
+  font-size: 30rpx;
+  color: red;
+}
+
+.food-numb {
+  height: 40rpx;
+  width: 150rpx;
+  line-height: 40rpx;
+  font-size: 25rpx;
+  margin-right: 20rpx;
+}
+
+.food-numb .add, .food-numb .remove {
+  width: 40rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  border-radius: 30rpx;
+  text-align: center;
+  float: right;
+}
+
+.food-numb .text {
+  float: right;
+}
+
+.food-numb .add {
+  font-size: 35rpx;
+  line-height: 37rpx;
+  font-weight: 700;
+  background: #ff5a00;
+  margin-left: 15rpx;
+  color: #fff;
+}
+
+.food-numb .remove {
+  margin-right: 15rpx;
+  line-height: 28rpx;
+  font-size: 60rpx;
+  font-weight: 500;
+  box-sizing: border-box;
+  border: 2rpx;
+  border-style: solid;
+  border-color: #b0b0b0;
+  color: #b0b0b0;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column; 
+  position: fixed;
+  right: 0; 
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+}
+
+.footer .orderList {
+  max-height: 550rpx;  
+  bottom: 100rpx;
+  font-size: 28rpx;
+  color: #a9a9a9;
+  background: #ffffff;
+}
+
+.footer .orderList .clear-order-list{
+  height: 80rpx;
+  background-color: #f4f4f4;
+  text-align: right;
+  line-height: 80rpx;
+  color: #666666;
+  padding-right: 20rpx;
+  font-size: 24rpx;
+}
+.footer .orderList .clear-order-list image{
+  width: 25rpx;
+  height: 25rpx;
+  margin-right: 5rpx;
+}
+.order-list-item{
+  height: 120rpx;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #e1e1e1;
+  padding: 0 20rpx;
+  overflow: hidden;
+}
+.order-list-item .item-info{
+  flex: 3;
+}
+.order-list-item .item-info .item-info-title{
+  color: #333333;
+  font-size: 26rpx;
+}
+.order-list-item .item-info .item-info-desc{
+  font-size: 20rpx;
+  margin-top: 10rpx;
+}
+.order-list-item .order-price{
+  flex: 1;
+  color: #333333;
+  font-size: 26rpx;
+  text-align: center;
+}
+
+.footer .settlement {
+  display: flex;
+  flex-direction: row;
+}
+.footer .img {
+  position: absolute;
+  height: 90rpx;
+  width: 90rpx;
+  border-radius: 100rpx;
+  left: 20rpx;
+  top: -45rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #666;
+}
+
+.footer .img text {
+  position: absolute;
+  z-index: 9;
+  height: 30rpx;
+  width: 30rpx;
+  border-radius: 20rpx;
+  right: 0rpx;
+  top: 0rpx;
+  text-align: center;
+  line-height: 30rpx;
+  background-color: red;
+  font-size: 16rpx;
+  color: #fff;
+}
+
+#orderPage .howMuch {
+  position: relative;
+  z-index: 9;
+  /* height: 100rpx; */
+  flex: 1;
+  font-size: 28rpx;
+  line-height: 100rpx;
+  padding-left: 130rpx;
+  color: #a9a9a9;
+  background: #333;
+}
+
+.footer .pay {
+  width: 200rpx;
+  text-align: center;
+  line-height: 100rpx;
+  color: #999;
+  font-size: 30rpx;
+  background: #2c2c2c;
+}
+
+#orderPage .cost {
+  margin-top: 10rpx;
+  color: #fff;
+  font-size: 50rpx;
+  line-height: 50rpx;
+  height: 50rpx;
+  width: 100rpx;
+}
+
+.footer.active .free {
+  font-size: 25rpx;
+  width: 100rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+
+.footer.active .pay {
+  background: #ff5a00;
+  color: #fff;
+}
+
+/*商家评价*/
+
+.commentPage-header {
+  height: 190rpx;
+  display: flex;
+  padding-bottom: 30rpx;
+  border-bottom: 20rpx solid #f4f4f4;
+}
+
+.commentPage-score {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 55rpx;
+  color: #ffb001;
+  border-right: 1px solid #e8e8e8;
+}
+
+.commentPage-score .overall {
+  margin-top: 10rpx;
+  font-size: 30rpx;
+  color: #9d9d9d;
+}
+
+.commentPage-score .rate {
+  line-height: 50rpx;
+  font-size: 25rpx;
+  color: #e8e8e8;
+}
+
+.commentPage-rating {
+  padding-top: 20rpx;
+  flex: 6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 30rpx;
+  color: #9d9d9d;
+}
+
+.commentPage-rating .restaurant, .commentPage-rating .distribute {
+  display: flex;
+  width: 450rpx;
+}
+
+.commentPage-rating .distribute {
+  margin-top: 40rpx;
+}
+
+.commentPage-rating .stars {
+  margin: 0 40rpx;
+}
+
+.commentPage-category {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 20rpx solid #f4f4f4;
+}
+
+.commentPage-category .category-item {
+  height: 40rpx;
+  line-height: 40rpx;
+  margin: 20rpx 10rpx;
+  font-size: 28rpx;
+  color: #9d9d9d;
+  border: 1px solid #ececec;
+  border-radius: 40rpx;
+  padding: 5rpx 15rpx;
+}
+
+
+
+
+
+
+
+
+
+/*罩层*/
+.mask{
+  width: 100%; 
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;  
+  background-color: rgba(0, 0, 0, .6);  
+}
+.mask1{
+  width: 100%; 
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;  
+  background-color: rgba(0, 0, 0, .6);  
+}

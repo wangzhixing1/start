@@ -1,0 +1,44 @@
+<import src="../../page/common/orderPage.wxml" />
+<import src="../../page/common/commentPage.wxml" />
+
+<view class="container">
+  <!-- 店铺头部 -->
+  <view class="header">
+    <image class="logo" src="{{shopHeader.logo}}" />
+    <view class="welcome ellipsis">起送 ￥{{shopHeader.start}} | 配送￥{{shopHeader.deliver}} | {{shopHeader.time}}分钟</view>
+  </view>
+  <!-- 店铺公告  -->
+  <view class='notice'>
+    <swiper class='notice-container' indicator-dots="{{false}}" autoplay="true" current="0" interval="3000" duration="600" circular="true" vertical="true">
+      <block wx:for="{{shopHeader.activity}}" wx:key="shopHeader.activity">
+        <swiper-item>
+          <view class='row notice-con'>
+            <view class="name">{{item}}</view>
+            <view class="notice-num">{{shopHeader.activity.length}}个活动></view>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!--店铺内容  -->
+  <view class="content-container">
+    <view class="container1" disable-scroll="true">
+      <view class="header1">
+        <block wx:for="{{swiperTitle}}" wx:key="">
+          <view class="title {{index==currentPage?'selected':''}}" data-index="{{index}}" bindtap="turnPage">{{item.text}}</view>
+        </block>
+      </view>
+      <swiper class="swiper" style='height:{{height}}px' current="{{currentPage}}" bindchange="turnTitle">
+        <swiper-item id="orderPage">
+           <template is="orderPage" data="{{menu,selected,cost,heightScroll,orderMenuHeight,maskhide,orderlisthide,orderMenu,orderNum}}"/> 
+        </swiper-item>
+        <swiper-item id="commentPage">
+          <template is="commentPage" data="{{categoryList}} "/>
+        </swiper-item>
+        <swiper-item id="restaurantPage">商家信息</swiper-item>
+        <swiper-item id="mine">我的</swiper-item>
+      </swiper>
+    </view>
+  </view>
+    <view class='mask' hidden='{{maskhide}}'></view>  
+</view>
